@@ -23,7 +23,7 @@ After the input file is entered, the program will check the input strings and wr
 ## Group Information
 
 Group: POLY Owns Logical Yeeting
-Group Members: Jaden Fong and Mario Mariotta IV
+Group Members: Jaden Fong (Github: JayJaden06) and Mario Mariotta IV (Github: LowLevelLowLife)
 
 Contributions:
 
