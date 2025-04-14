@@ -20,7 +20,15 @@ For example:
 
 After the input file is entered, the program will check the input strings and write the results to "out.txt" in the same directory as the program.
 
-### Group: POLY Owns Logical Yeeting
-### Group Members: Jaden Fong and Mario Mariotta IV
+## Group Information
 
+Group: POLY Owns Logical Yeeting
+Group Members: Jaden Fong and Mario Mariotta IV
+
+Contributions:
+Mario:
+- NFA
+- Numeric Literal Checker
+Jaden:
+- Numeric Literal Checker Interface
 
