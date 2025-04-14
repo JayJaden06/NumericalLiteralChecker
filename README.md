@@ -13,7 +13,7 @@ After the program is run, enter the path and file name (i.e. input.txt) into the
 
 The program expects for each line in the input file to consist of: (input string, expected result), with the string and expected result on the same line, separated by at least one space. The expected result should be either the word "accept" or "reject". The case of the expected result does not matter.
 
-For example:
+input file content example:
 ```
 100_00e+10 accept
 0xFOOB4RB@Z Reject
