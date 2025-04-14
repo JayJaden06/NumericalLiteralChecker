@@ -14,10 +14,10 @@ After the program is run, enter the path and file name (i.e. input.txt) into the
 The program expects for each line in the input file to consist of: (input string, expected result), with the string and expected result on the same line, separated by at least one space. The expected result should be either the word "accept" or "reject". The case of the expected result does not matter.
 
 For example:
-{{file begin}}
+```
 100_00e+10 accept
 0xFOOB4RB@Z Reject
-
+```
 After the input file is entered, the program will check the input strings and write the results to "out.txt" in the same directory as the program.
 
 ## Group Information
