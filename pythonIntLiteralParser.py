@@ -156,22 +156,30 @@ def check_file_with_nfa(filename: str):
         # open the input file in read mode
         with open(filename, 'r') as file:
             lines = file.readlines()  # store all lines from the file in a list
+            with open('out.txt', 'w') as output:
 
-        # iterate through each line and its corresponding line number (1-indexed)
-        for line_num, line in enumerate(lines, start=1):
-            stripped_line = line.strip()  # remove leading/trailing whitespace from each line
+                # iterate through each line and its corresponding line number (1-indexed)
+                for line_num, line in enumerate(lines, start=1):
+                    stripped_line = line.strip()  # remove leading/trailing whitespace from each line
+                    # handle the case where the line is empty
+                    if not stripped_line:
+                        print(f"Line {line_num}: reject (empty line)")
+                        continue
+                    stripped_line = stripped_line.split()
+                    # lower the accept/reject expected field for comparison later in program
+                    stripped_line[1] = stripped_line[1].lower()
 
-            # handle the case where the line is empty
-            if not stripped_line:
-                print(f"Line {line_num}: reject (empty line)")
-                continue
+                    # call the numeric literal checker on the current line
+                    result = numLiteralChkr(stripped_line[0], 0, len(stripped_line[0]))
 
-            # call the numeric literal checker on the current line
-            result = numLiteralChkr(stripped_line, 0, len(stripped_line))
+                    # print whether the line is accepted or rejected by the automaton
+                    print(f"Line {line_num}: {'accept' if result else 'reject'}")
 
-            # print whether the line is accepted or rejected by the automaton
-            print(f"Line {line_num}: {'accept' if result else 'reject'}")
+                    # convert result from bool to string for comparison with expected
+                    result = "accept" if result else "reject"
 
+                    output.write("Input: " + stripped_line[0] + "\tExpected: " + stripped_line[1] + "\tResult: " + result + "\t" + str((stripped_line[1] == result)) + "\n")
+                  
     # handle the case where the file could not be found
     except FileNotFoundError:
         print(f"Error: File '{filename}' not found.")
