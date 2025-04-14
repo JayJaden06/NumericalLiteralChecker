@@ -26,9 +26,11 @@ Group: POLY Owns Logical Yeeting
 Group Members: Jaden Fong and Mario Mariotta IV
 
 Contributions:
+
 Mario:
 - NFA
 - Numeric Literal Checker
+
 Jaden:
 - Numeric Literal Checker Interface
 
